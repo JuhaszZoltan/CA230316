@@ -1,5 +1,6 @@
 ﻿using CA230316;
 using System.Net.Http.Headers;
+using System.Security.Cryptography.X509Certificates;
 
 List<Person> people = MTest.GetTestList();
 
@@ -113,3 +114,12 @@ string lif = people
     .Where(p => p.Sex)
     .MaxBy(p => p.Age)!
     .Name;
+
+var f = new int[] { 3, 4, 5, 5, 6 };
+
+var asd = people.Zip(f).ToDictionary(x => x.Item1, x => x.Item2);
+
+//string fff = "";
+//if ((fff = Console.ReadLine()!) == "lófasz")
+//{
+//}
